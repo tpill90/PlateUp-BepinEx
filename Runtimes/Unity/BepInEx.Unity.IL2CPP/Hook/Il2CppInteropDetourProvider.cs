@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using Il2CppInterop.Runtime.Injection;
 using MonoMod.Core;
@@ -27,7 +27,8 @@ internal class Il2CppInteropDetour : IDetour
     public void Dispose() => detour.Dispose();
 
     public void Apply() => detour.Apply();
-    
+    public T GenerateTrampoline<T>() where T : Delegate => throw new NotImplementedException();
+
     public nint Target => detour.Source;
     public nint Detour => detour.Target;
     public nint OriginalTrampoline => detour.OrigEntrypoint;
