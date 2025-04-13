@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
@@ -47,7 +47,7 @@ public class UnityChainloader : BaseChainloader<BaseUnityPlugin>
         get => (UnityChainloader)BaseChainloader<BaseUnityPlugin>.Instance;
         set => BaseChainloader<BaseUnityPlugin>.Instance = value;
     }
-    
+
     protected override string ConsoleTitle => _consoleTitle;
 
 
